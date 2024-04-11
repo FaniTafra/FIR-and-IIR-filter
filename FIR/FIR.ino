@@ -41,13 +41,13 @@ void setup() {
   int v = 0;
   int j = 0;
 
-  /*for (i = 0; i < num; i++) {
+  for (i = 0; i < num; i++) {
      sensorValue[i] = analogRead(sensorPin);    //read the sensor value using ADC
      Serial.print(sensorValue[i]);
      //Serial.print(" ");
      //Serial.println(i);
      //delay(0.5);
-   }*/
+   }
   
   /*for (v = 0; v < COEFNUM; v++)
   {
@@ -55,18 +55,6 @@ void setup() {
       h[j] = coef[v] * window[j];
       j++;
   }*/
-  
-  /*int n = 0;
-  y[80] = 0;
-  for (n = 80; n >= 0; n--) 
-  {
-      y[80] = c[n] * coef[n]; 
-      //Serial.println(y[80], 4);
-      //Serial.println(n);
-  }
-  Serial.println(y[80]);*/
-  
-  //Serial.println("******************");
 }
 
 void loop() {
@@ -77,17 +65,7 @@ void loop() {
   int k = 0;
   int i = 0;
 
-  for (i = 0; i < num; i++) {
-     sensorValue[i] = analogRead(sensorPin);    //read the sensor value using ADC
-     Serial.println(sensorValue[i]);
-     //Serial.print(" ");
-     //Serial.println(i);
-     //delay(0.5);
-    }
-
- // Serial.println(" ");
-
-  /*y[80] = 0;
+  y[80] = 0;
   for (n = 80; n >= 0; n--) 
    {
       y[80] += sensorValue[n] * coef_bp[n]; 
@@ -108,22 +86,6 @@ void loop() {
   }
   sensorValue[80] = temp[0];*/
   
-  
-
-  //   for (n = 0; n < COEFNUM; n++)
-  //      {
-  //       y[n] = 0;
-  //       for (k = 0; k <= n; k++)
-  //         {
-  //           if (n - k < 0) {
-  //             h[n-k] = 0;
-  //           }
-  //           y[n] += sensorValue[k] * h[n - k];
-  // //        Serial.println(y[n]);
-  // //        //Serial.print(" ");
-  //         }
-  //         Serial.println(y[n]);
-  //      }
   //a = micros();
   //Serial.println(a - time);
 }
